@@ -136,6 +136,31 @@
 
     .btn:hover{transform:translateY(-1px)}
 
+    .btn.icon-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .btn.icon-btn svg{
+      width:16px;
+      height:16px;
+      flex:0 0 auto;
+      stroke:currentColor;
+      fill:none;
+      stroke-width:1.8;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+
+    .btn.icon-btn .brand-icon{
+      width:16px;
+      height:16px;
+      flex:0 0 auto;
+      fill:currentColor;
+      stroke:none;
+    }
+
     .section{
       border-top:none;
       padding:46px 0 0;
@@ -385,11 +410,39 @@
       </p>
 
       <div class="top-links">
-        <a class="btn primary" href="#publications">Publications</a>
+        <a class="btn primary icon-btn" href="#publications" aria-label="Publications">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 3h9l3 3v15H6z"></path>
+            <path d="M15 3v4h4"></path>
+            <path d="M9 12h6"></path>
+            <path d="M9 16h6"></path>
+          </svg>
+          <span>Publications</span>
+        </a>
+
         <a class="btn" href="AcademicCVSS.pdf" target="_blank">CV</a>
-        <a class="btn" href="https://scholar.google.com/citations?user=P2tZ4H8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-        <a class="btn" href="https://www.linkedin.com/in/shreya-shukla-uci/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="btn" href="https://github.com/shreyaalkuhs" target="_blank" rel="noopener noreferrer">GitHub</a>
+
+        <a class="btn icon-btn" href="https://scholar.google.com/citations?user=P2tZ4H8AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 9l9-5 9 5-9 5z"></path>
+            <path d="M7 12v4c0 1.6 2.2 3 5 3s5-1.4 5-3v-4"></path>
+          </svg>
+          <span>Google Scholar</span>
+        </a>
+
+        <a class="btn icon-btn" href="https://www.linkedin.com/in/shreya-shukla-uci/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5.2 3.5a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2ZM3.4 9h3.6v11H3.4V9Zm5.7 0h3.5v1.5h.1c.5-.9 1.7-1.9 3.6-1.9 3.8 0 4.5 2.5 4.5 5.8V20h-3.6v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V20H9.1V9Z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a class="btn icon-btn" href="https://github.com/shreyaalkuhs" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2.6a9.7 9.7 0 0 0-3.1 18.9c.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.8V21c0 .3.2.6.7.5A9.7 9.7 0 0 0 12 2.6Z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
       </div>
     </div>
 
@@ -491,6 +544,18 @@
         </div>
       </article>
 
+
+      <article class="pub">
+        <div class="year">2024</div>
+        <div>
+          <h3><a class="pub-title" href="https://escholarship.org/uc/item/8cq2q589">Beyond Standard Modeling: Modular Symmetries and Non-Perturbative Methods</a></h3>
+          <p class="authors">Shreya Shukla</p>
+        </div>
+        <div class="links">
+          <a href="https://escholarship.org/uc/item/8cq2q589">thesis</a>
+        </div>
+      </article>
+
       <article class="pub">
         <div class="year">2023</div>
         <div>
@@ -501,35 +566,6 @@
           <a href="https://arxiv.org/abs/2303.08847">arXiv</a>
         </div>
       </article>
-
-      <article class="pub">
-  <div class="year">2021</div>
-<article class="pub">
-  <div class="year">2021</div>
-
-  <div>
-    <h3>
-      <a class="pub-title"
-         href="https://arxiv.org/abs/2102.11286"
-         target="_blank"
-         rel="noopener noreferrer">
-        Metaplectic Flavor Symmetries in Magnetized Tori
-      </a>
-    </h3>
-
-    <p class="authors">
-      Y. Almumin, M.-C. Chen, V. Knapp-Perez, S. Ramos-Sanchez, M. Ratz, and S. Shukla
-      · JHEP 05 (2021), 078
-    </p>
-  </div>
-
-  <div class="links">
-    <a href="https://arxiv.org/abs/2102.11286"
-       target="_blank"
-       rel="noopener noreferrer">arXiv</a>
-  </div>
-</article>
-      
     </div>
   </section>
 
