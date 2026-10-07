@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Shreya Shukla — theoretical and computational physicist working on quantum learning, classical learning, and quantum field theory." />
+  <title>Shreya Shukla — Theoretical & Computational Physicist</title>
+  <style>
+    :root{
+      --bg:#f3f5f1;
+      --paper:#fafbf8;
+      --ink:#2c312d;
+      --muted:#6d756e;
+      --line:#d9dfd8;
+      --accent:#a8b2a5;
+      --accent-dark:#68766a;
+      --accent-soft:#e7ece5;
+      --max:1100px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.6;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+    header{
+      border-bottom:1px solid var(--line);
+      background:rgba(243,245,241,.96);
+      position:sticky;
+      top:0;
+      z-index:20;
+      backdrop-filter:blur(10px);
+    }
+
+    .nav{
+      min-height:66px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:28px;
+    }
+
+    .brand{
+      text-decoration:none;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.28rem;
+      font-weight:600;
+      letter-spacing:-.015em;
+    }
+
+    nav{display:flex;gap:22px;flex-wrap:wrap}
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:.9rem;
+    }
+    nav a:hover{color:var(--accent-dark)}
+
+    main{padding:0 0 56px}
+
+    .intro{
+      padding:72px 0 54px;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 250px;
+      gap:36px;
+      align-items:start;
+    }
+
+    .profile-photo{
+      width:250px;
+      height:250px;
+      object-fit:cover;
+      border-radius:22px;
+      border:1px solid var(--line);
+      display:block;
+      background:#e8ece6;
+    }
+
+    .intro h1{
+      margin:0 0 6px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(2.9rem,6vw,5.3rem);
+      line-height:1;
+      font-weight:500;
+      letter-spacing:-.04em;
+    }
+
+    .subtitle{
+      margin:0 0 22px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.35rem;
+      color:#4d403b;
+    }
+
+    .bio{
+      width:100%;
+      max-width:none;
+      margin:0;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+
+    .top-links{
+      display:flex;
+      gap:10px;
+      margin-top:26px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      border:1px solid var(--line);
+      padding:10px 14px;
+      font-size:.9rem;
+      background:var(--paper);
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:white;
+      border-color:var(--accent);
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .section{
+      border-top:1px solid var(--line);
+      padding:46px 0 0;
+      margin-top:8px;
+    }
+
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:24px;
+    }
+
+    .section-title h2{
+      margin:0;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.8rem;
+      font-weight:500;
+    }
+
+    .section-title::after{
+      content:"";
+      height:1px;
+      background:var(--line);
+      flex:1;
+    }
+
+    .themes{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .theme{
+      background:var(--paper);
+      border:1px solid var(--line);
+      padding:22px;
+      min-height:250px;
+    }
+
+    .theme .num{
+      color:var(--accent-dark);
+      font-size:.78rem;
+      letter-spacing:.12em;
+      font-weight:700;
+    }
+
+    .theme h3{
+      margin:8px 0 8px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.35rem;
+      font-weight:500;
+    }
+
+    .theme p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
+    .theme ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .theme li{
+      margin:7px 0;
+      font-size:.9rem;
+    }
+
+    .pub-list{border-top:1px solid var(--line)}
+
+    .pub{
+      display:grid;
+      grid-template-columns:70px minmax(0,1fr) 150px;
+      gap:18px;
+      padding:20px 0;
+      border-bottom:1px solid var(--line);
+      align-items:start;
+    }
+
+    .year{
+      color:var(--accent-dark);
+      font-size:.9rem;
+      font-variant-numeric:tabular-nums;
+    }
+
+    .pub h3{
+      margin:0 0 4px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.05rem;
+      font-weight:600;
+      line-height:1.35;
+    }
+
+    .authors{
+      color:var(--muted);
+      font-size:.9rem;
+      margin:0;
+    }
+
+    .links{
+      display:flex;
+      gap:12px;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+    }
+
+    .links a{
+      color:var(--accent-dark);
+      text-decoration:none;
+      font-size:.88rem;
+      font-weight:600;
+    }
+
+    .links a:hover{text-decoration:underline}
+
+    .code-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    .repo{
+      display:block;
+      text-decoration:none;
+      border:1px solid var(--line);
+      background:var(--paper);
+      padding:20px;
+    }
+
+    .repo small{
+      color:var(--accent-dark);
+      font-size:.72rem;
+      letter-spacing:.1em;
+      font-weight:700;
+    }
+
+    .repo h3{
+      margin:8px 0 8px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.2rem;
+      font-weight:500;
+    }
+
+    .repo p{
+      margin:0;
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .repo:hover{
+      border-color:#d7b9ae;
+      background:#f6f8f4;
+    }
+
+    .contact{
+      padding:34px 0 0;
+      color:var(--muted);
+    }
+
+    .contact p{max-width:760px}
+    .contact a{color:var(--accent-dark);font-weight:600;text-decoration:none}
+
+    footer{
+      margin-top:56px;
+      border-top:1px solid var(--line);
+      padding:24px 0;
+      color:var(--muted);
+      font-size:.84rem;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    @media (max-width:850px){
+      .intro{grid-template-columns:1fr}
+      .themes{grid-template-columns:1fr}
+      .pub{grid-template-columns:1fr;gap:6px}
+      .links{justify-content:flex-start}
+      .code-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width:650px){
+      .wrap{padding:0 18px}
+      header{position:static}
+      .nav{align-items:flex-start;padding:16px 0}
+      nav{gap:10px 14px;justify-content:flex-end}
+      .intro{padding-top:48px}
+      footer{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Shreya Shukla</a>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#code">Code</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <section class="intro">
+    <div>
+      <h1>Shreya Shukla</h1>
+      <p class="subtitle">Theoretical & Computational Physicist</p>
+
+      <p class="bio">
+        I work on theoretical and computational approaches to learning physical systems from data,
+        with interests spanning quantum many-body physics, statistical physics, lattice field theory,
+        and quantum field theory. My recent work focuses on inverse problems: learning Hamiltonians,
+        effective theories, and collective behavior directly from measurements or samples.
+      </p>
+
+      <div class="top-links">
+        <a class="btn primary" href="#publications">Publications</a>
+        <a class="btn" href="https://github.com/shreyaalkuhs">GitHub</a>
+      </div>
+    </div>
+
+    <img class="profile-photo" src="profile.jpg" alt="Shreya Shukla writing on a whiteboard" />
+  </section>
+
+  <section id="research" class="section">
+    <div class="section-title"><h2>Research</h2></div>
+
+    <div class="themes">
+      <article class="theme">
+        <div class="num">01</div>
+        <h3>Quantum Learning</h3>
+        <p>
+          Learning interacting quantum systems directly from thermal or measurement data,
+          with an emphasis on Hamiltonian reconstruction and fermionic systems.
+        </p>
+        <ul>
+          <li>Scalable Learning of Quantum Hamiltonians via Operator Score Matching</li>
+          <li>Efficient Learning of Lattice Gauge Theories with Fermions</li>
+        </ul>
+      </article>
+
+      <article class="theme">
+        <div class="num">02</div>
+        <h3>Classical Learning</h3>
+        <p>
+          Statistical inference for classical many-body systems, including learning couplings,
+          effective theories, phase transitions, and renormalization-group flows.
+        </p>
+        <ul>
+          <li>Learning of Statistical Field Theories</li>
+          <li>Computationally Sufficient Statistics for Ising Models</li>
+        </ul>
+      </article>
+
+      <article class="theme">
+        <div class="num">03</div>
+        <h3>Quantum Field Theory</h3>
+        <p>
+          My PhD work focused on quantum field theory, renormalization-group dynamics,
+          and the structure of interacting field theories.
+        </p>
+        <ul>
+          <li>Chirality Changing RG Flows: Dynamics and Models</li>
+          <li>Additional PhD-era work in quantum field theory</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="publications" class="section">
+    <div class="section-title"><h2>Selected Publications</h2></div>
+
+    <div class="pub-list">
+      <article class="pub">
+        <div class="year">2026</div>
+        <div>
+          <h3>Scalable Learning of Quantum Hamiltonians via Operator Score Matching</h3>
+          <p class="authors">Shreya Shukla, Abhijith Jayakumar, Andrey Y. Lokhov</p>
+        </div>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2609.25246">arXiv</a>
+          <a href="https://github.com/shreyaalkuhs/Learning-of-Quantum-Hamiltonians-via-Operator-Score-Matching">code</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="year">2026</div>
+        <div>
+          <h3>Computationally Sufficient Statistics for Ising Models</h3>
+          <p class="authors">Abhijith Jayakumar, Shreya Shukla, Marc Vuffray, Andrey Y. Lokhov, Sidhant Misra</p>
+        </div>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2602.12449">arXiv</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="year">2026</div>
+        <div>
+          <h3>Efficient Learning of Lattice Gauge Theories with Fermions</h3>
+          <p class="authors">Shreya Shukla, Yukari Yamauchi, Andrey Y. Lokhov, Scott Lawrence, Abhijith Jayakumar</p>
+        </div>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2512.19891">arXiv</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="year">2025</div>
+        <div>
+          <h3>Learning of Statistical Field Theories</h3>
+          <p class="authors">Shreya Shukla, Abhijith Jayakumar, Andrey Y. Lokhov</p>
+        </div>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2511.09859">arXiv</a>
+          <a href="https://github.com/shreyaalkuhs/LearningFieldTheories">code</a>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="year">2023</div>
+        <div>
+          <h3>Chirality Changing RG Flows: Dynamics and Models</h3>
+          <p class="authors">Yuri Shirman, Shreya Shukla, Michael Waterbury</p>
+        </div>
+        <div class="links">
+          <a href="https://arxiv.org/abs/2303.08847">arXiv</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="code" class="section">
+    <div class="section-title"><h2>Code</h2></div>
+
+    <div class="code-grid">
+      <a class="repo" href="https://github.com/shreyaalkuhs/Learning-of-Quantum-Hamiltonians-via-Operator-Score-Matching">
+        <small>QUANTUM LEARNING</small>
+        <h3>Operator Score Matching</h3>
+        <p>Code and data for Hamiltonian learning from thermal states.</p>
+      </a>
+
+      <a class="repo" href="https://github.com/shreyaalkuhs/LearningFieldTheories">
+        <small>CLASSICAL LEARNING</small>
+        <h3>Learning Field Theories</h3>
+        <p>Julia implementations for parameter learning, phase transitions, and RG-flow reconstruction.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="section-title"><h2>Contact</h2></div>
+    <p>
+      I am interested in research at the interface of many-body physics, statistical inference,
+      field theory, and machine learning. You can find my code and current projects on
+      <a href="https://github.com/shreyaalkuhs">GitHub</a>.
+    </p>
+  </section>
+
+  <footer>
+    <span>© 2026 Shreya Shukla</span>
+    <span>Academic website</span>
+  </footer>
+</main>
+</body>
+</html>
