@@ -15,6 +15,9 @@
       --accent:#a8b2a5;
       --accent-dark:#68766a;
       --accent-soft:#e7ece5;
+      --peach:#e0a48f;
+      --peach-dark:#b87863;
+      --peach-soft:#f6e5df;
       --max:1100px;
     }
 
@@ -78,7 +81,7 @@
       width:250px;
       height:250px;
       object-fit:cover;
-      border-radius:22px;
+      border-radius:28px;
       border:1px solid var(--line);
       display:block;
       background:#e8ece6;
@@ -122,12 +125,13 @@
       padding:10px 14px;
       font-size:.9rem;
       background:var(--paper);
+      border-radius:14px;
     }
 
     .btn.primary{
-      background:var(--accent);
+      background:var(--peach);
       color:white;
-      border-color:var(--accent);
+      border-color:var(--peach);
     }
 
     .btn:hover{transform:translateY(-1px)}
@@ -168,12 +172,14 @@
     .theme{
       background:var(--paper);
       border:1px solid var(--line);
+      border-top:3px solid var(--peach);
       padding:22px;
       min-height:250px;
+      border-radius:20px;
     }
 
     .theme .num{
-      color:var(--accent-dark);
+      color:var(--peach-dark);
       font-size:.78rem;
       letter-spacing:.12em;
       font-weight:700;
@@ -202,6 +208,30 @@
       font-size:.9rem;
     }
 
+
+    .theme li a{
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px solid transparent;
+    }
+
+    .theme li a:hover{
+      color:var(--peach-dark);
+      border-bottom-color:var(--peach);
+    }
+
+    .pub-title{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .pub-title:hover{
+      color:var(--peach-dark);
+      text-decoration:underline;
+      text-underline-offset:2px;
+    }
+
+
     .pub-list{border-top:1px solid var(--line)}
 
     .pub{
@@ -214,7 +244,7 @@
     }
 
     .year{
-      color:var(--accent-dark);
+      color:var(--peach-dark);
       font-size:.9rem;
       font-variant-numeric:tabular-nums;
     }
@@ -241,7 +271,7 @@
     }
 
     .links a{
-      color:var(--accent-dark);
+      color:var(--peach-dark);
       text-decoration:none;
       font-size:.88rem;
       font-weight:600;
@@ -261,10 +291,11 @@
       border:1px solid var(--line);
       background:var(--paper);
       padding:20px;
+      border-radius:18px;
     }
 
     .repo small{
-      color:var(--accent-dark);
+      color:var(--peach-dark);
       font-size:.72rem;
       letter-spacing:.1em;
       font-weight:700;
@@ -284,8 +315,8 @@
     }
 
     .repo:hover{
-      border-color:#d7b9ae;
-      background:#f6f8f4;
+      border-color:#e5c8bc;
+      background:#fff7f3;
     }
 
     .contact{
@@ -294,7 +325,7 @@
     }
 
     .contact p{max-width:760px}
-    .contact a{color:var(--accent-dark);font-weight:600;text-decoration:none}
+    .contact a{color:var(--peach-dark);font-weight:600;text-decoration:none}
 
     footer{
       margin-top:56px;
@@ -358,7 +389,7 @@
       </div>
     </div>
 
-    <img class="profile-photo" src="profile.jpg" alt="Shreya Shukla writing on a whiteboard" />
+    <img class="profile-photo" src="profile-peach.png" alt="Shreya Shukla writing on a whiteboard" />
   </section>
 
   <section id="research" class="section">
@@ -373,8 +404,8 @@
           with an emphasis on Hamiltonian reconstruction and fermionic systems.
         </p>
         <ul>
-          <li>Scalable Learning of Quantum Hamiltonians via Operator Score Matching</li>
-          <li>Efficient Learning of Lattice Gauge Theories with Fermions</li>
+          <li><a href="https://arxiv.org/abs/2609.25246">Scalable Learning of Quantum Hamiltonians via Operator Score Matching</a></li>
+          <li><a href="https://arxiv.org/abs/2512.19891">Efficient Learning of Lattice Gauge Theories with Fermions</a></li>
         </ul>
       </article>
 
@@ -386,8 +417,8 @@
           effective theories, phase transitions, and renormalization-group flows.
         </p>
         <ul>
-          <li>Learning of Statistical Field Theories</li>
-          <li>Computationally Sufficient Statistics for Ising Models</li>
+          <li><a href="https://arxiv.org/abs/2511.09859">Learning of Statistical Field Theories</a></li>
+          <li><a href="https://arxiv.org/abs/2602.12449">Computationally Sufficient Statistics for Ising Models</a></li>
         </ul>
       </article>
 
@@ -399,8 +430,8 @@
           and the structure of interacting field theories.
         </p>
         <ul>
-          <li>Chirality Changing RG Flows: Dynamics and Models</li>
-          <li>Additional PhD-era work in quantum field theory</li>
+          <li><a href="https://arxiv.org/abs/2303.08847">Chirality Changing RG Flows: Dynamics and Models</a></li>
+          <li><a href="https://escholarship.org/uc/item/8cq2q589">Beyond Standard Modeling: Modular Symmetries and Non-Perturbative Methods</a></li>
         </ul>
       </article>
     </div>
@@ -413,7 +444,7 @@
       <article class="pub">
         <div class="year">2026</div>
         <div>
-          <h3>Scalable Learning of Quantum Hamiltonians via Operator Score Matching</h3>
+          <h3><a class="pub-title" href="https://arxiv.org/abs/2609.25246">Scalable Learning of Quantum Hamiltonians via Operator Score Matching</a></h3>
           <p class="authors">Shreya Shukla, Abhijith Jayakumar, Andrey Y. Lokhov</p>
         </div>
         <div class="links">
@@ -425,7 +456,7 @@
       <article class="pub">
         <div class="year">2026</div>
         <div>
-          <h3>Computationally Sufficient Statistics for Ising Models</h3>
+          <h3><a class="pub-title" href="https://arxiv.org/abs/2602.12449">Computationally Sufficient Statistics for Ising Models</a></h3>
           <p class="authors">Abhijith Jayakumar, Shreya Shukla, Marc Vuffray, Andrey Y. Lokhov, Sidhant Misra</p>
         </div>
         <div class="links">
@@ -436,7 +467,7 @@
       <article class="pub">
         <div class="year">2026</div>
         <div>
-          <h3>Efficient Learning of Lattice Gauge Theories with Fermions</h3>
+          <h3><a class="pub-title" href="https://arxiv.org/abs/2512.19891">Efficient Learning of Lattice Gauge Theories with Fermions</a></h3>
           <p class="authors">Shreya Shukla, Yukari Yamauchi, Andrey Y. Lokhov, Scott Lawrence, Abhijith Jayakumar</p>
         </div>
         <div class="links">
@@ -447,7 +478,7 @@
       <article class="pub">
         <div class="year">2025</div>
         <div>
-          <h3>Learning of Statistical Field Theories</h3>
+          <h3><a class="pub-title" href="https://arxiv.org/abs/2511.09859">Learning of Statistical Field Theories</a></h3>
           <p class="authors">Shreya Shukla, Abhijith Jayakumar, Andrey Y. Lokhov</p>
         </div>
         <div class="links">
@@ -456,10 +487,22 @@
         </div>
       </article>
 
+
+      <article class="pub">
+        <div class="year">2024</div>
+        <div>
+          <h3><a class="pub-title" href="https://escholarship.org/uc/item/8cq2q589">Beyond Standard Modeling: Modular Symmetries and Non-Perturbative Methods</a></h3>
+          <p class="authors">Shreya Shukla</p>
+        </div>
+        <div class="links">
+          <a href="https://escholarship.org/uc/item/8cq2q589">thesis</a>
+        </div>
+      </article>
+
       <article class="pub">
         <div class="year">2023</div>
         <div>
-          <h3>Chirality Changing RG Flows: Dynamics and Models</h3>
+          <h3><a class="pub-title" href="https://arxiv.org/abs/2303.08847">Chirality Changing RG Flows: Dynamics and Models</a></h3>
           <p class="authors">Yuri Shirman, Shreya Shukla, Michael Waterbury</p>
         </div>
         <div class="links">
