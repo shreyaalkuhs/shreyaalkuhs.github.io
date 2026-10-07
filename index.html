@@ -201,6 +201,41 @@
       padding:22px;
       min-height:250px;
       border-radius:20px;
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .theme > *:not(.theme-watermark){
+      position:relative;
+      z-index:1;
+    }
+
+    .theme-watermark{
+      position:absolute;
+      right:-8px;
+      top:22px;
+      width:175px;
+      height:175px;
+      object-fit:contain;
+      opacity:.095;
+      z-index:0;
+      pointer-events:none;
+      filter:saturate(.75);
+    }
+
+    .theme:nth-child(2) .theme-watermark{
+      width:165px;
+      height:165px;
+      right:-2px;
+      top:30px;
+    }
+
+    .theme:nth-child(3) .theme-watermark{
+      width:180px;
+      height:180px;
+      right:-12px;
+      top:20px;
     }
 
     .theme .num{
@@ -454,6 +489,7 @@
 
     <div class="themes">
       <article class="theme">
+        <img class="theme-watermark" src="quantum-learning-icon.png" alt="" aria-hidden="true">
         <div class="num">01</div>
         <h3>Quantum Learning</h3>
         <p>
@@ -467,6 +503,7 @@
       </article>
 
       <article class="theme">
+        <img class="theme-watermark" src="classical-learning-icon.png" alt="" aria-hidden="true">
         <div class="num">02</div>
         <h3>Classical Learning</h3>
         <p>
@@ -480,6 +517,7 @@
       </article>
 
       <article class="theme">
+        <img class="theme-watermark" src="qft-icon.png" alt="" aria-hidden="true">
         <div class="num">03</div>
         <h3>Quantum Field Theory</h3>
         <p>
