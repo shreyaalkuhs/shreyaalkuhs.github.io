@@ -7,14 +7,14 @@
   <title>Shreya Shukla — Theoretical & Computational Physicist</title>
   <style>
     :root{
-      --bg:#edf3ed;
-      --paper:#f8fbf7;
-      --ink:#293029;
-      --muted:#667066;
-      --line:#d1dbd1;
-      --accent:#9eaf9c;
-      --accent-dark:#5f6e61;
-      --accent-soft:#e3ebe2;
+      --bg:#eef3ed;
+      --paper:#f9fbf7;
+      --ink:#2c312d;
+      --muted:#6d756e;
+      --line:#d9dfd8;
+      --accent:#9fad9d;
+      --accent-dark:#637064;
+      --accent-soft:#e3eae2;
       --peach:#e0a48f;
       --peach-dark:#b87863;
       --peach-soft:#f6e5df;
@@ -27,16 +27,20 @@
       margin:0;
       background:var(--bg);
       color:var(--ink);
-      font-family:Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family:Avenir Next, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
       line-height:1.6;
     }
 
     a{color:inherit}
+
+    button, input, textarea, select{
+      font:inherit;
+    }
     .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
 
     header{
       border-bottom:1px solid var(--line);
-      background:rgba(237,243,237,.96);
+      background:rgba(238,243,237,.96);
       position:sticky;
       top:0;
       z-index:20;
@@ -53,7 +57,7 @@
 
     .brand{
       text-decoration:none;
-      font-family:Georgia, "Times New Roman", serif;
+      font-family:Avenir Next, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size:1.28rem;
       font-weight:600;
       letter-spacing:-.015em;
@@ -84,12 +88,12 @@
       border-radius:28px;
       border:1px solid var(--line);
       display:block;
-      background:#e4ebe3;
+      background:#e8ece6;
     }
 
     .intro h1{
       margin:0 0 6px;
-      font-family:Georgia, "Times New Roman", serif;
+      font-family:Avenir Next, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size:clamp(2.9rem,6vw,5.3rem);
       line-height:1;
       font-weight:500;
@@ -98,9 +102,9 @@
 
     .subtitle{
       margin:0 0 22px;
-      font-family:Georgia, "Times New Roman", serif;
+      font-family:Avenir Next, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size:1.35rem;
-      color:var(--accent-dark);
+      color:#4d403b;
     }
 
     .bio{
@@ -176,7 +180,7 @@
 
     .section-title h2{
       margin:0;
-      font-family:Georgia, "Times New Roman", serif;
+      font-family:Avenir Next, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size:1.8rem;
       font-weight:500;
     }
@@ -198,8 +202,8 @@
       background:var(--paper);
       border:1px solid var(--line);
       border-top:3px solid var(--peach);
-      padding:22px;
-      min-height:250px;
+      padding:22px 22px 24px;
+      min-height:300px;
       border-radius:20px;
       position:relative;
       overflow:hidden;
@@ -210,62 +214,42 @@
       position:relative;
       z-index:1;
     }
-
     .theme-plot{
       position:absolute;
-      right:10px;
-      top:14px;
-      width:185px;
-      height:185px;
+      right:8px;
+      top:-10px;
+      width:58%;
+      height:58%;
+      object-fit:contain;
+      opacity:.22;
       z-index:0;
-      opacity:.16;
       pointer-events:none;
     }
 
-    .theme-plot .plot-main{
-      stroke:#bcc8bc;
-      stroke-width:2.2;
-      fill:none;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
-
-    .theme-plot .plot-soft{
-      stroke:#c8d2c7;
-      stroke-width:1.7;
-      fill:none;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
-
-    .theme-plot .plot-accent{
-      stroke:var(--peach);
-      stroke-width:2.1;
-      fill:none;
-      stroke-linecap:round;
-      stroke-linejoin:round;
-    }
-
-    .theme-plot .fill-accent{
-      fill:rgba(224,164,143,.55);
-      stroke:none;
+    .theme:nth-child(1) .theme-plot{
+      right:8px;
+      top:-10px;
+      width:58%;
+      height:58%;
+      opacity:.22;
     }
 
     .theme:nth-child(2) .theme-plot{
-      width:175px;
-      height:175px;
-      right:4px;
-      top:18px;
-      opacity:.15;
+      right:8px;
+      top:-10px;
+      width:58%;
+      height:58%;
+      opacity:.22;
     }
 
     .theme:nth-child(3) .theme-plot{
-      width:190px;
-      height:190px;
-      right:-6px;
-      top:8px;
-      opacity:.15;
+      right:8px;
+      top:-10px;
+      width:58%;
+      height:58%;
+      opacity:.20;
     }
+
 
     .theme .num{
       color:var(--peach-dark);
@@ -276,9 +260,8 @@
 
     .theme h3{
       margin:8px 0 8px;
-      font-family:Georgia, "Times New Roman", serif;
       font-size:1.35rem;
-      font-weight:500;
+      font-weight:600;
     }
 
     .theme p{
@@ -297,29 +280,16 @@
       font-size:.9rem;
     }
 
-
     .theme li a{
       color:inherit;
       text-decoration:none;
-      border-bottom:1px solid transparent;
+      border-bottom:none;
     }
 
     .theme li a:hover{
       color:var(--peach-dark);
-      border-bottom-color:var(--peach);
-    }
-
-    .pub-title{
-      color:inherit;
       text-decoration:none;
     }
-
-    .pub-title:hover{
-      color:var(--peach-dark);
-      text-decoration:underline;
-      text-underline-offset:2px;
-    }
-
 
     .pub-list{border-top:none}
 
@@ -340,10 +310,32 @@
 
     .pub h3{
       margin:0 0 4px;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:1.08rem;
-      font-weight:500;
+      font-family:Avenir Next, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size:1.05rem;
+      font-weight:600;
       line-height:1.35;
+    }
+
+    /* Publication title links: never underlined; peach/orange when interacted with */
+    .pub h3 a.pub-title,
+    .pub h3 a.pub-title:link,
+    .pub h3 a.pub-title:visited{
+      color:var(--ink);
+      text-decoration:none !important;
+      border-bottom:none !important;
+      box-shadow:none !important;
+      transition:color .15s ease;
+    }
+
+    .pub h3 a.pub-title:hover,
+    .pub h3 a.pub-title:focus,
+    .pub h3 a.pub-title:focus-visible,
+    .pub h3 a.pub-title:active{
+      color:var(--peach-dark);
+      text-decoration:none !important;
+      border-bottom:none !important;
+      box-shadow:none !important;
+      outline:none;
     }
 
     .authors{
@@ -392,7 +384,7 @@
 
     .repo h3{
       margin:8px 0 8px;
-      font-family:Georgia, "Times New Roman", serif;
+      font-family:Avenir Next, Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size:1.2rem;
       font-weight:500;
     }
@@ -404,8 +396,8 @@
     }
 
     .repo:hover{
-      border-color:#e6d2c8;
-      background:#fcf8f5;
+      border-color:#e5c8bc;
+      background:#fff7f3;
     }
 
     .contact{
@@ -518,19 +510,7 @@
 
     <div class="themes">
       <article class="theme">
-        <svg class="theme-plot" viewBox="0 0 200 200" aria-hidden="true">
-          <circle class="plot-soft" cx="100" cy="102" r="52"></circle>
-          <ellipse class="plot-soft" cx="100" cy="102" rx="52" ry="20"></ellipse>
-          <path class="plot-soft" d="M48 102h104"></path>
-          <path class="plot-soft" d="M100 48v108"></path>
-          <path class="plot-main" d="M100 102L136 72"></path>
-          <circle class="fill-accent" cx="136" cy="72" r="5"></circle>
-          <path class="plot-soft" d="M100 102L77 126"></path>
-          <path class="plot-soft" d="M100 102L122 116"></path>
-          <path class="plot-accent" d="M86 95c12-10 22-18 35-24"></path>
-          <text x="146" y="74" fill="#bcc8bc" font-size="10" font-family="Georgia, serif">|0⟩</text>
-          <text x="142" y="170" fill="#bcc8bc" font-size="10" font-family="Georgia, serif">|1⟩</text>
-        </svg>
+        <img class="theme-plot" src="quantum-plot.png" alt="" aria-hidden="true">
         <div class="num">01</div>
         <h3>Quantum Learning</h3>
         <p>
@@ -544,22 +524,7 @@
       </article>
 
       <article class="theme">
-        <svg class="theme-plot" viewBox="0 0 200 200" aria-hidden="true">
-          <path class="plot-soft" d="M25 130L78 100L132 122L175 86"></path>
-          <path class="plot-soft" d="M40 140L93 110L147 132"></path>
-          <path class="plot-soft" d="M58 149L111 119L165 141"></path>
-          <path class="plot-soft" d="M25 130L40 140L58 149"></path>
-          <path class="plot-soft" d="M78 100L93 110L111 119"></path>
-          <path class="plot-soft" d="M132 122L147 132L165 141"></path>
-          <path class="plot-soft" d="M175 86L188 95"></path>
-          <path class="plot-main" d="M58 149C86 106 122 82 150 84C164 85 177 94 188 112"></path>
-          <circle class="fill-accent" cx="76" cy="61" r="4.2"></circle>
-          <circle class="fill-accent" cx="92" cy="53" r="3.7"></circle>
-          <circle class="fill-accent" cx="108" cy="61" r="4"></circle>
-          <circle class="fill-accent" cx="126" cy="49" r="3.5"></circle>
-          <circle class="fill-accent" cx="116" cy="73" r="3.8"></circle>
-          <circle class="fill-accent" cx="94" cy="78" r="3.3"></circle>
-        </svg>
+        <img class="theme-plot" src="classical-plot.png" alt="" aria-hidden="true">
         <div class="num">02</div>
         <h3>Classical Learning</h3>
         <p>
@@ -573,19 +538,7 @@
       </article>
 
       <article class="theme">
-        <svg class="theme-plot" viewBox="0 0 200 200" aria-hidden="true">
-          <path class="plot-main" d="M44 54c13 9 13 21 26 30c12 9 14 21 26 30"></path>
-          <path class="plot-main" d="M44 146c13-9 13-21 26-30c12-9 14-21 26-30"></path>
-          <path class="plot-main" d="M156 54c-13 9-13 21-26 30c-12 9-14 21-26 30"></path>
-          <path class="plot-main" d="M156 146c-13-9-13-21-26-30c-12-9-14-21-26-30"></path>
-          <circle class="fill-accent" cx="100" cy="100" r="4.8"></circle>
-          <text x="36" y="50" fill="#bcc8bc" font-size="11" font-family="Georgia, serif">p</text>
-          <text x="34" y="154" fill="#bcc8bc" font-size="11" font-family="Georgia, serif">p</text>
-          <text x="160" y="50" fill="#bcc8bc" font-size="11" font-family="Georgia, serif">p</text>
-          <text x="160" y="154" fill="#bcc8bc" font-size="11" font-family="Georgia, serif">p</text>
-          <text x="106" y="95" fill="#bcc8bc" font-size="11" font-family="Georgia, serif">k</text>
-          <path class="plot-accent" d="M72 100h56"></path>
-        </svg>
+        <img class="theme-plot" src="qft-plot.png" alt="" aria-hidden="true">
         <div class="num">03</div>
         <h3>Quantum Field Theory</h3>
         <p>
