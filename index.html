@@ -75,20 +75,28 @@
 
     .intro{
       padding:72px 0 54px;
-      display:grid;
-      grid-template-columns:minmax(0,1fr) 250px;
-      gap:36px;
-      align-items:start;
+      display:block;
+      min-height:300px;
     }
 
     .profile-photo{
       width:250px;
       height:250px;
       object-fit:cover;
-      border-radius:28px;
+      border-radius:50%;
       border:1px solid var(--line);
       display:block;
       background:#e8ece6;
+      float:right;
+      margin:0 0 24px 38px;
+      shape-outside:circle(50%);
+      shape-margin:18px;
+    }
+
+    .intro::after{
+      content:"";
+      display:block;
+      clear:both;
     }
 
     .intro h1{
@@ -216,8 +224,8 @@
     }
     .theme-plot{
       position:absolute;
-      right:8px;
-      top:-10px;
+      right:-28px;
+      top:-38px;
       width:58%;
       height:58%;
       object-fit:contain;
@@ -227,24 +235,24 @@
     }
 
     .theme:nth-child(1) .theme-plot{
-      right:8px;
-      top:-10px;
+      right:-28px;
+      top:-38px;
       width:58%;
       height:58%;
       opacity:.22;
     }
 
     .theme:nth-child(2) .theme-plot{
-      right:8px;
-      top:-10px;
+      right:-28px;
+      top:-38px;
       width:58%;
       height:58%;
       opacity:.22;
     }
 
     .theme:nth-child(3) .theme-plot{
-      right:8px;
-      top:-10px;
+      right:-28px;
+      top:-38px;
       width:58%;
       height:58%;
       opacity:.20;
@@ -289,6 +297,23 @@
     .theme li a:hover{
       color:var(--peach-dark);
       text-decoration:none;
+    }
+
+
+    .theme{
+      text-align:center;
+    }
+
+    .theme ul{
+      display:inline-block;
+      text-align:left;
+      margin-left:auto;
+      margin-right:auto;
+      padding-left:18px;
+    }
+
+    .theme .num{
+      text-align:center;
     }
 
     .pub-list{border-top:none}
@@ -400,6 +425,15 @@
       background:#fff7f3;
     }
 
+
+    .repo{
+      text-align:center;
+    }
+
+    .repo p{
+      text-align:center;
+    }
+
     .contact{
       padding:34px 0 0;
       color:var(--muted);
@@ -420,7 +454,13 @@
     }
 
     @media (max-width:850px){
-      .intro{grid-template-columns:1fr}
+      .profile-photo{
+        float:none;
+        margin:0 0 26px 0;
+        width:210px;
+        height:210px;
+        shape-outside:none;
+      }
       .themes{grid-template-columns:1fr}
       .pub{grid-template-columns:1fr;gap:6px}
       .links{justify-content:flex-start}
@@ -454,8 +494,10 @@
 <main id="top" class="wrap">
 
   <section class="intro">
+    <img class="profile-photo" src="profile-peach-corrected.png" alt="Shreya Shukla writing on a whiteboard" />
+
     <div>
-      <h1>Shreya Shukla</h1>
+<h1>Shreya Shukla</h1>
       <p class="subtitle">Theoretical & Computational Physicist</p>
 
       <p class="bio">
@@ -501,8 +543,6 @@
         </a>
       </div>
     </div>
-
-    <img class="profile-photo" src="profile-peach-corrected.png" alt="Shreya Shukla writing on a whiteboard" />
   </section>
 
   <section id="research" class="section">
